@@ -315,12 +315,56 @@ footer .social-links {
 @media only screen and (min-width: 1024px) {
 
        /*TODO: FALTA CSS */
+       
 
-.fab{
-       font-size: 80px;
+                                                /*EDICION DE MENU*/
 
+/*le agregamos un diseño al menu, para que cuando se acerque el puntero a cada enlace cambie al color que se ha insertado ahi
+que es una pequeña derivacion del rojo*/
+.menu li a:hover{
+    color: #EE2F08;
 }
 
+/*Al codigo que esta mas arriba, solo le agrego un margin-bottom (margen inferior) y un padding o un alrededor del menu
+y anulo el margin top, para que no quede mucho espacio arriba, y que solo se separe el menu de la foto del catedrático 
+(osea abajo del menu)*/
+.menu li {
+    display: block;
+    padding: 0.5em;
+    margin-top: 0px;
+    margin-bottom: 3em;
+}
+/*Luego con el id menu, edite el bloque en donde se enuentran los li, eliminando su margin top, y aumentando el tamaño de la letra
+con font-size, y el margen de la derecha con margin-right*/
+.menu{
+    margin-top: 0em;
+    font-size: 3em;
+    margin-right: 2.5em;
+}
+
+                                                /*EDICION DE LOGO*/
+
+/*Ahora editamos la parte con class logo, le modificamos el tamaño y aumentamos el margin-top(el de arriba) y el margin left
+(el de la izquierda) calculando que quede igual que en la imagen de referencia*/
+.logo {
+    width: 150px;
+    margin-top: 1.5em;
+    margin-left: 100px;
+}
+
+
+                                /*EDICION DE LOGO GIT Y TWITTER JUNTO CON ICONO DE FLECHA*/
+
+/*editamos el tamaño de los logos de git y twitter, calculando un aproximado acorde a la imagen e referencia. Hayq eu tomar en 
+cuenta que aqui editamos de una vez los logos que estan en el footer de una vez, aumentando tambien su tamaño a 80px
+Como no son imagenes sino que iconos, se editan con Font-size
+*/
+.fab{
+       font-size: 80px;
+}
+
+/*aqui se edita el icono de flecha que se ha insertado, cambiandole el color a una derivacion de verde acua, con Color, y 
+aumentando el margen inferior. Ademas se aumenta el tamaño del icono, y como es un icono, se aumenta con Font-size*/
 .fas{
     margin-bottom: 2em;
     color: #90ce9f;
@@ -331,6 +375,44 @@ footer .social-links {
     padding-left: 45px;
     padding-right: 45px;
 }
+
+.about .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(50px, 1fr);
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+    justify-items: center;
+    align-items: center;
+}
+  
+.bio-info{
+    grid-column: 1 / 2;
+    grid-row: 2;
+    margin-left: 100px;
+}
+
+.contact{
+    grid-column: 2 / 2;
+    grid-row: 2;
+    margin-right: 50px;
+    margin-bottom: 40px;
+    width: 400px;
+}
+
+input[type=submit] {
+    width:40%;}
+
+.about h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.125em;
+    margin: auto;
+    grid-column:1/3;
+    grid-row: 1;
+}
+
 
 }
 
