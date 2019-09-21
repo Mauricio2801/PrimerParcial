@@ -11,6 +11,9 @@
 }
 
 /* El estilo base para moviles */
+
+/*Editamos el estilo del cuerpo completo de nuestra pagina web, definiendo un color de fondo, y un color general de letra blanco
+luego usamos el tipo de letra Monserrat, sacado de google fonts, alineamos todo al centro, y damos un grosor a la letra de 400*/
 body {
     background-color: #112935;
     color: white;
@@ -19,10 +22,14 @@ body {
     font-weight: 400;
 }
 
+/*Editamos el encabezado, y le palicamos FLEX, aqui en el encabezado, estara el menu, y el logo, que posteriormente se editaran
+Aqui, solo dejamos ambos elementos el menu y el logo, con un espacio enmedio, para eso sirve el justify-content: space-between
+ */
 .header {
     display: flex;
     justify-content: space-between
 }
+
 
 .src-only {
     display: none;
@@ -371,10 +378,19 @@ aumentando el margen inferior. Ademas se aumenta el tamaño del icono, y como es
     font-size: 3.5em;
 }
 
+                                
 .post ul li {
     padding-left: 45px;
     padding-right: 45px;
 }
+
+                                    /*EDICION DE CONTAINER FINAL "ABOUT" Y FORMULARIO*/
+
+/*Editamos el contenedor en general, aplicandole grid, creando dos columnas y dos filas
+en el grid-template-columns lo ponemos a que se repita dos veces, con el mismo tamaño para ambas
+en el grid-template-rows le ponemos un minimo de 50px, dejandole un maximo 1fr
+al final se le da un tamaño del 100% de la pantalla que se tenga a este contenedor, y todos los items quedan justificado y 
+alineados en el centro*/
 
 .about .container {
     display: grid;
@@ -386,24 +402,12 @@ aumentando el margen inferior. Ademas se aumenta el tamaño del icono, y como es
     justify-items: center;
     align-items: center;
 }
-  
-.bio-info{
-    grid-column: 1 / 2;
-    grid-row: 2;
-    margin-left: 100px;
-}
 
-.contact{
-    grid-column: 2 / 2;
-    grid-row: 2;
-    margin-right: 50px;
-    margin-bottom: 40px;
-    width: 400px;
-}
-
-input[type=submit] {
-    width:40%;}
-
+/*Primero editamos la parte del titulo, donde se encuentra el acerca de, que seria la parte con h2 de etiqueta
+aqui, se pone todo en mayuscula, luego se define un grosor y un tamaño de letra y un margen auto. 
+con la parte del grid, se define que estara en las primeras dos columnas, osea que estas dos se combinaran, y para esto,
+sumamos uno mas al total de columnas que se tienen, osea que en ve de 1/2 seria 1/3, y asi nos combina las celdas
+y en las filas, seria la primera fila */
 .about h2 {
     text-transform: uppercase;
     font-weight: 700;
@@ -412,6 +416,36 @@ input[type=submit] {
     grid-column:1/3;
     grid-row: 1;
 }
+
+/*Ahora editamos la parte que esta identificada con la clase bio-info, declarando que este se encontrara en la primera columna
+de las dos que hemos creado en el cntenedor, con grid-column: 1/2, luego declaramos que se encontrara en la segunda fila que se
+creo anteriormente. Ademas le agregamos un margen al lado izquierdo, calculando aproximadamente el que se le asigno en la imagen
+de referencia*/
+.bio-info{
+    grid-column: 1 / 2;
+    grid-row: 2;
+    margin-left: 100px;
+}
+
+/*Ahora, la parte del contacto, donde se encuentra el formulario, le indicamos que se encontrara en la segunda columna de las dos
+que hemos creado, y siempre estara en la segunda fila. Ademas le agregamos un margen a la derecha a modo que nos quede parecido
+a la imgen de referencia,  y un margen abajo para que se separe del footer, modificmos el tamaño con width, para que quede parecido
+a la imagend e referencia*/
+.contact{
+    grid-column: 2 / 2;
+    grid-row: 2;
+    margin-right: 50px;
+    margin-bottom: 40px;
+    width: 400px;
+}
+
+/*Ahora modificamos el tamaño del imput final, el que parece un boton que dice contactar, pero como se ha creado con un imput
+de tipo submit, se utiliza el siguinte codigo, en donde s epone la etiqueta utilizada y entre corchetes el tipo que se le definio
+y le ponemos un tamaño del 40% en comparacion del resto del formulario
+Referencia: https://www.w3schools.com/css/css_attribute_selectors.asp; (no sabia como hacerlo, busque y ahi lo encontre)
+*/
+input[type=submit] {
+    width:40%;}
 
 
 }
