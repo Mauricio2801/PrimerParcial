@@ -1,8 +1,10 @@
-
+/*Aqui se inserta la url, con el que se importaran las fuentes que se utilizaran*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
 /* El CSS siguiente esta pensando primero para moviles y luego para 
    Escritiorio*/
+
+   /*Con esta parte se edita todo lo que este antes y despues de todos los elementos de la pagina web*/
 *, ::before, ::after {
     margin: 0;
     padding: 0;
@@ -12,7 +14,7 @@
 
 /* El estilo base para moviles */
 
-/*Editamos el estilo del cuerpo completo de nuestra pagina web, definiendo un color de fondo, y un color general de letra blanco
+/*Aqui fue editado el estilo del cuerpo completo de nuestra pagina web, definiendo un color de fondo, y un color general de letra blanco
 luego usamos el tipo de letra Monserrat, sacado de google fonts, alineamos todo al centro, y damos un grosor a la letra de 400*/
 body {
     background-color: #112935;
@@ -22,7 +24,7 @@ body {
     font-weight: 400;
 }
 
-/*Editamos el encabezado, y le palicamos FLEX, aqui en el encabezado, estara el menu, y el logo, que posteriormente se editaran
+/*Se editó el encabezado, y le palicamos FLEX, aqui en el encabezado, estara el menu, y el logo, que posteriormente se editaran
 Aqui, solo dejamos ambos elementos el menu y el logo, con un espacio enmedio, para eso sirve el justify-content: space-between
  */
 .header {
@@ -30,7 +32,7 @@ Aqui, solo dejamos ambos elementos el menu y el logo, con un espacio enmedio, pa
     justify-content: space-between
 }
 
-
+/*Se edita la clase src-nly y hide-mobile, sin darle ningun parametro dejandole el diplay como none*/
 .src-only {
     display: none;
 }
@@ -38,17 +40,23 @@ Aqui, solo dejamos ambos elementos el menu y el logo, con un espacio enmedio, pa
 .hide-mobile {
     display: none;
 }
-
+/*Aqui fue editado la parte donde se da una breve descripcion sobre como se desempeña nuestro catedratico, odificamos el tamaño 
+de la letra, dejandolo algo pequeño, se dejo sin padding, y el espacio de la tipo celda remarcada por linea, sera de 25px*/
 p{
-    font-size: 0.75em;
+    font-size: 3em;
     padding: 0rem;
     line-height: 25px;
 }
 
+/*Aqui se edita la parte de la clase logo, modificando su tamaño y el margen izquierdo*/
 .logo{
     width: 90px;
     margin-left: 1em;
 }
+
+/*Se edita, la clase que tiene options, aplicandole un color que en realidad lo unico que hace es heredar el de la clase padre
+se quita la decoracion del texto con none, y se le aplica una posicion relativa. Ademas se le aplica FLEX y con la propiedad 
+wrap para que los elementos sean distribuidos en barias lineas si eso es necesario. Ademas poniendo la posicion al inicio*/
 .options {
     color: inherit;
     text-decoration: none;
@@ -62,15 +70,22 @@ p{
     align-items: flex-start;
 
 }
+
+/*Ahora a todo aquello que tiene la etiqueta i, dentro de la clase options, se le edita el tamaño de texto a 1.6rem*/
 .options i:last-child {
     font-size: 1.6rem;
 }
 
 /* Big area */
+
+/*Se edita la clase big-hero, y se especifica que se empezara editando la imagen que se encuentra, osea la fotografia
+dandole un tamaño de 150px*/
 .big-hero img {
     width: 150px;
 }
 
+/*Ahora  se edita la etiqueta h2 que se encuentra siempre dentro de la clase big-hero, en la cual se modifica elt amaño de laletra
+y el grosor de esta msima, dejando un espaciado entre letras y al mismo tiempo modificando el margen superior*/
 .big-hero h2 {
     font-size: 1.875em;
     font-weight: 700;
@@ -78,6 +93,8 @@ p{
     margin-top: 1em ;
 }
 
+/*Ahora se edita a etiqueta p que tambien se encuentra dentro de la clase big-hero, aplicandole un tamaño a la letra y 
+dandole un color parecido a un celeste cielo*/
 .big-hero p {
     font-size: 0.7em;;
     color: #D7DEE6;
@@ -85,6 +102,10 @@ p{
 }
 
 /* Social links*/
+
+/*Ahora se empieza la parte donde se encuentran los iconos de Git y Twitter, los cuales estan dentro de una clase llamada .social-links
+en esta, se deja la lista que esta dentro de ella sin ningun estilo, y se le agrega un boton inferior. Ademas se le agrega FLEX y se
+deja en direcion de filas y se deja centrado*/
 .social-links{
     list-style: none;
     padding: 0;
@@ -94,7 +115,8 @@ p{
     justify-content: center;
 }
 
-
+/*Ahora si nos disponemos a editar, la parte donde se encuentran los iconos de Git y Twitter, dandole un color parecido al acua, 
+dejandolos sin decorcion y modificando el margen de los lados*/
 .social-links li a{
     color: #D7DEE6;
     text-decoration: none;
@@ -103,15 +125,19 @@ p{
 
 }
 
+/*Ahora, la clase green-area a todo esa parte se le da un color distinto al resto de la pagina web*/
 .green-area {
     background-color: #0AC693; 
 }
 
-
+/*Ahora se edita la clase del container post, dandole un padding de 1em, y modificando su margen inferior*/
 .post {
     padding: 1em;
     margin-bottom: -2px;
 }
+
+/*Luego se edita la eiqueta h2, dejandolo todo en mayuscula, con el uppercase, el grueso de la letra y el tamaño tambien se edita
+y el amrgen se le agrega a todo los lados*/
 .post h2 {
     text-transform: uppercase;
     font-weight: 700;
@@ -119,16 +145,21 @@ p{
     margin: 1em;
 }
 
+/*Ahora se edita toda la aprte donde se encuentran los rectangulos, esots estan primero encerrados en un UL, dentro de ellos
+estan tres li, donde en cada uno de ellos hay un article
+en el ul, el estilo de la lista se deja sin nada*/
 .post ul {
     list-style: none;
 }
 
+/*Ahora en la edicion de los li, la minima altura que se puede tener es de 300px, y el mayor ancho es de 350px, dejando un margen autonomo*/
 .post ul li {
     min-height: 300px;
     max-width:350px;
     margin: 2rem auto;
 }
 
+/*Ahora se edita el article, dandole un radio al remarco, cambiando el color de fondo y alineando el texto*/
 .post ul li article {
     overflow: hidden;
     border-radius: 10px;
@@ -137,12 +168,15 @@ p{
 
 }
 
+/*Aqui se edita la imagen del artculo rectagular, dandole un ancho y un alto, y se deja acorde a que 
+se recorte la imagen acorde al tamaño que se deja en la pantalla, osea que la imagen queda adaptable al tamaño que se le de*/
 .post article img{
     height: 150px;
     width: 100%;
     object-fit: cover;
 }
 
+/*La edicion del titulo del articulo, se edita aqui, dandole magen superior, un padding, editando su tamaño de letra, y el color*/
 .post article h3 {
     color: #0D5061;
     margin-top: 2em;
@@ -153,6 +187,8 @@ p{
     text-overflow: ellipsis;
 }
 
+/*Ademas se edita el texto que se encuentra el articulo, modificando su color, el tamaño el padding, 
+y cuantos pixeles tendra de espacion entre la linea que lo delimita*/
 .post article p {
     color:#112935;
     font-size: 0.75em;
@@ -162,10 +198,12 @@ p{
 
 /* About */
 
+/*Se empieza a editar la penultima parte d ela pagina web, en la clase about, mdificandole el margen superior*/
 .about{
     margin-top: 2em;
 }
 
+/*Se edita la seccion donde esta la etiqueta h2, dejandolo todo en mayuscula, modificndo el tamaño d ela letra y su grosor y los margenes*/
 .about h2 {
     text-transform: uppercase;
     font-weight: 700;
@@ -173,10 +211,14 @@ p{
     margin: 2em;
 }
 
+/*Ahora, va la parte donde se encuentra la "informacion del sitio", especificamente la imgen que se incerta, del logo
+modificando su tamaño*/
 .bio-info img{
    width: 200px;
 }
 
+/*Se edita el parrafo que s eencuentra en la clase, cambiando su tamaño de letra, modificando su padding, la lineacion del texto
+el espaciado, y el espacio de celda delimitado por la linea*/
 .bio-info p{
     font-size: 16px;
     padding: 2em;
@@ -185,8 +227,8 @@ p{
     letter-spacing: 2px;
 }
 
-
-
+/*Aqui se edita el formulario, aplicano FLEX, dandole direccion de columna, y alineando todo a la iquierda, y modificando su padding
+dandole 0 en el top y bottom, y 1em a right y left*/
 .contact {
     display: flex;
     flex-direction: column;
@@ -198,11 +240,13 @@ p{
     margin-top: 1.5em;
 }
 
+/*En esta parte se agrega flex el mero formulario, dandole sentido de columnas*/
 .contact-form {
     display: flex;
     flex-direction: column;
 }
-
+/*Ahora se editan los imputs y la parte donde va la text area, dandole un padding, dejandolo sin borde, y dejandole el radio
+del borde, ademas, se modifica el tamaño de letra y el tamaño al 100%*/
 .contact-form input, .contact-form textarea{
     padding: 1rem 2rem;
     border: none;
@@ -210,6 +254,42 @@ p{
     font-size: 1em;
     width: 100%;
 }
+
+/*Todo lo que esta editado en la parte de arriba, fue realizado por nuestro Catedratico Nestor Aldana (Derechos de a autor)*/
+
+                                        /*AQUI EDITE YO EL CODIGO PARA MOVILES*/
+.logo{
+    margin-top: 1em;
+    margin-left: 2.5em;
+}
+
+.menu{
+    margin-right: 4em;
+}
+.social-links .fab {
+    font-size: 70px;
+}
+h2{
+    font-size: 2em;
+}
+p{
+    font-size: 1.5em;
+}
+
+.big-hero .container{
+    margin-bottom: 0.7em;
+}
+.post ul{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.about .container {
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 40px;
+}
+
 
 /* Decorando placeholder */
 
@@ -280,13 +360,13 @@ footer .social-links {
         justify-content: center;
     }
     
+
     .post ul li {
         min-height: 350px;
         max-height: 3500px;
         margin: 1rem 2rem;
         flex: 1 0 300px;
     }
-
 
     .logo {
         width: 150px;
@@ -302,21 +382,95 @@ footer .social-links {
         display: none;
     }
 
- .menu {
+    .menu {
         background-color: #112935; 
         position: static;
         z-index: 20;
         width: auto;
         height:auto;
         display: flex;
-        margin-top: 1em;
     }
 
+    .post ul li {
+        justify-content: space-between;
+    }
 
+    .post article{
+        width: 70%;
+    }
 
-
+    .post ul {
+        width: 70%;
+        justify-content: space-between;
+    }
 
     /*TODO: FALTA CSS */
+
+.menu li a:hover{
+    color: #EE2F08;
+}
+
+.menu {
+    font-size: 2.5em;
+    margin-right: 3em;
+    margin-top: 1em;
+    padding: 0;
+}
+
+.social-links {
+    margin-top: 0;
+}
+
+.contact {
+    width: 100%;
+ }
+  
+.big-hero p {
+    font-size: 1em;
+}
+
+.about label {
+    font-size: 1.5em;
+}
+
+.post article h3 {
+    font-size: 3em;
+}
+
+.post h2 {
+    font-size: 2em;
+}
+
+.fab {
+    font-size: 75px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.fas {
+    font-size: 70px;
+    margin-top: 0.3em;
+    color: #90ce9f;
+}
+
+.container a {
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+}
+
+.post ul li h3 {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.post ul li p {
+    font-size: 1em;
+}
+
+input[type="text"] {
+    width: 100%;
+}
+
 } 
 
 @media only screen and (min-width: 1024px) {
@@ -380,9 +534,10 @@ aumentando el margen inferior. Ademas se aumenta el tamaño del icono, y como es
 
                                 
 .post ul li {
-    padding-left: 45px;
-    padding-right: 45px;
+    display: flex;
+    justify-content: space-between;
 }
+
 
                                     /*EDICION DE CONTAINER FINAL "ABOUT" Y FORMULARIO*/
 
