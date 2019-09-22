@@ -258,41 +258,44 @@ del borde, ademas, se modifica el tamaño de letra y el tamaño al 100%*/
 /*Todo lo que esta editado en la parte de arriba, fue realizado por nuestro Catedratico Nestor Aldana (Derechos de a autor)*/
 
                                         /*AQUI EDITE YO EL CODIGO PARA MOVILES*/
+/*Aqui edite el logo que se tiene, le di margin en la parte superior y a la izquierda*/
 .logo{
     margin-top: 1em;
     margin-left: 2.5em;
 }
-
+/*Ahora edito el menu, solo amunetandole el margen a la derecha*/
 .menu{
     margin-right: 4em;
 }
+/*Aqui se editan los iconos de git y de twitter, modificandoles el tamaño, como son iconos use font-size*/
 .social-links .fab {
     font-size: 70px;
 }
+/*El h2 o edito, y le modifico el tamaño*/
 h2{
     font-size: 2em;
 }
+
+/*Ahora le modifico el tamño d eletra a los parrafos*/
 p{
     font-size: 1.5em;
 }
-
-.big-hero .container{
-    margin-bottom: 0.7em;
-}
+/*Aqui edito los maergenes del contenedor donde estan los articulos, osea los rectangulos*/
 .post ul{
     margin-right: 50px;
     margin-left: 50px;
 }
-
+/*Edito los margenes del ultimo contenedor, donde esta el formulario y la informacion de acerca de*/
 .about .container {
     margin-right: 30px;
     margin-left: 30px;
     margin-bottom: 40px;
 }
 
-
+/*Aqui edito nuestro catedratico*/
 /* Decorando placeholder */
 
+/*Aqui se editan los colores del formulario*/
 ::-webkit-input-placeholder { 
     color: #D7DEE6; 
 } 
@@ -303,6 +306,8 @@ p{
  
 :-ms-input-placeholder { color: #D7DEE6; }
 
+/*Aqui se le da formato al imput que parce boton que esta hasta el final del formulario, se le da color de fondo, grosor a la letra
+y color, ademas tambien el tamaño de letra*/
 .contact-form input[type=submit] {
     background-color: #F74442;
     font-weight: 400;
@@ -310,19 +315,24 @@ p{
     font-size: 1rem;
 }
 
+
 .black-decoration{
     background-image: url("../images/decoracion_oscura_small.svg");
 }
 
+/*Este codigo sirve para editar el pie de la pagina web, dandole color de fondo y color a la letra*/
 footer{
     background-color: #0D5061;
     color:#D7DEE6;
 }
 
+/*Luego aqui, se edita la clase que se encentra en el pie de pagina, dejandole sin margen*/
 footer .social-links {
     margin: 0;
 }
+/*De aqui en adelante se hace toda al edicion del menu*/
 
+/*Primero se edita el menu en general, osea la clase, dandole color de fondo, una posicion, margenes y tamaño*/
 .menu {
     background-color: #112935;
     position: absolute;
@@ -332,18 +342,20 @@ footer .social-links {
     width: 100vw;
     height: calc(100vh - 60px);
 }
-
+/*Luego se deja un estilo de lista nulo, se alinea a la izquierda y el padding se deja a cero*/
 .menu {
     list-style: none;
     text-align: left;
     padding: 0em;
 }
+/*Ahora se edita la lista (li) dejandolo como bloque, editando el padding y el margen superior*/
 .menu li {
     display: block;
     padding: 0.5em;
     margin-top: 5px;
 }
-
+/*En este codigo ya se edita cada enlace del menu, osea se el da estilo a cada palabra dle menu, dandole un color blanco a la letra
+y dejandolo sin decoracion de texto*/
 .menu li a {
     color: white;
     text-decoration: none;
@@ -352,28 +364,34 @@ footer .social-links {
 
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
-  
-    .post ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
+/*Esta parte de aqui fue editada por nuestro catedratico Nestor Aldana*/
 
+/*Aqui se edita el espacio donde se encuentran los articulos, dandole todo el tamaño dle espacio, ademas, dejandolo sin estilo de lista alguno
+se le aplica flex, y ahi edite yo porque salia justify-content: center; y servia mas el space betwwen, para que asi quedara ya con los
+espacios entre cada articulo*/
+    .post ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+/*Luego se edita cada ul y los lim dandole una altura maxima y minima y valores en el flex, al mismo tiempo se edita los margenes
+teniendo el top y bottom 1rem, y el right y left 2rem*/
     .post ul li {
         min-height: 350px;
         max-height: 3500px;
         margin: 1rem 2rem;
         flex: 1 0 300px;
     }
-
+/*Se edita el logo, dandole un ancho, y modificando los margenes de arriba y la izquierda*/
     .logo {
         width: 150px;
         margin-top: 1.5em;
         margin-left: 100px;
     }
-
+/*Ahora se editan las siguientes clases, dejando una en bloque y la otra nula, osea con none*/
     .show-desktop {
         display: block;
     }
@@ -381,7 +399,9 @@ footer .social-links {
     .hide-desktop {
         display: none;
     }
-
+/*Se edita el menu, dandole color de fondo, dejando estatica su posicion y ademas agregando el z index
+para darle una posicion, en al cual el numeor representa la cercanía al observador, le aplicamos flex y dejamos autonomo
+el tamaño*/
     .menu {
         background-color: #112935; 
         position: static;
@@ -390,83 +410,83 @@ footer .social-links {
         height:auto;
         display: flex;
     }
-
+/*Ahora se edita la lista que se encuentra en la clase post, osea donde estan los tres rectangulos, aplicandole el space between*/
     .post ul li {
         justify-content: space-between;
     }
-
+/*Se le deja un tamaño del 70% a cada articulo*/
     .post article{
-        width: 70%;
+        width: 80%;
     }
 
-    .post ul {
-        width: 70%;
-        justify-content: space-between;
-    }
 
     /*TODO: FALTA CSS */
+/*Aqui comence a editar yo para tablets*/
 
+/*Primero edite el menu, dandoe el hover, osea que cuando acerque el puntero con el mouse a las palabras del menu, se volveran
+en este caso rojos*/
 .menu li a:hover{
     color: #EE2F08;
 }
-
+/*Ahora le doy tamaño a la letra del menu, y le modifico el margen derecho y el de arriba*/
 .menu {
-    font-size: 2.5em;
     margin-right: 3em;
     margin-top: 1em;
-    padding: 0;
+    font-size: 2.5em;
 }
 
-.social-links {
-    margin-top: 0;
-}
-
-.contact {
-    width: 100%;
- }
-  
+ /*en la seccion de big hero, donde esta la etiqueta p, se edita el tamaño d ela letra*/ 
 .big-hero p {
     font-size: 1em;
 }
-
-.about label {
-    font-size: 1.5em;
-}
-
-.post article h3 {
-    font-size: 3em;
-}
-
-.post h2 {
-    font-size: 2em;
-}
-
+/*El fab, es donde se encuentran los iconos de git y de twitter, les aumentamos tamaño y modificamos los margenes de izquierda y derecha
+para que queden un poco separados*/
 .fab {
-    font-size: 75px;
+    font-size: 70px;
     margin-left: 20px;
     margin-right: 20px;
 }
-
+/*Aqui modificamos, el icono de flecha, se aumenta d etamaño, se agrega un margen superior para separarlos de los iconos del fab
+y se cambia el color a uno acua*/
 .fas {
     font-size: 70px;
     margin-top: 0.3em;
     color: #90ce9f;
 }
 
+/*Ahora se edita todas las etiquetas h3 de los articulos de la clase post, dandole un tamaño a la letra*/
+.post article h3 {
+    font-size: 1.5em;
+}
+/*Sempre dentro d ela clase post, edito lo s h2 cambiandole el tamaño de la letra*/
+.post h2 {
+    font-size: 2em;
+}
+/*A las etiquetas a, que esten dentro d euna clase container, se les modifica el margen superior he inferior*/
 .container a {
     margin-top: 1.5em;
     margin-bottom: 3em;
 }
-
+/*Ahora dejamos los caracteres dentro de post con h3 con un estilo d eletra grueso y modificamos su tamaño*/
 .post ul li h3 {
-    font-weight: bold;
-    font-size: 2em;
+    font-weight: bolder;
+    font-size: 1em;
 }
-
+/*ahora los parrafos que estan dentro del post y de las listas, se les modifica el tamaño de la letra*/
 .post ul li p {
     font-size: 1em;
 }
 
+/*Aqui edite la parte dle formulario, a modo de dejar el tamaño al 100% que diera la pantalla, despetando los amrgenes establecidos previamente*/
+.contact {
+    width: 100%;
+ }
+/*Aqui se edita los label del formulario, modificandoles el tamaño*/
+.about label {
+    font-size: 1.5em;
+}
+/*Y con este se edita el que aprece boton al final del formulario, pero en realidad es un imput, y en este caso que es diseño para tablets
+se deja que abarque el 100% del formulario*/
 input[type="text"] {
     width: 100%;
 }
@@ -492,7 +512,7 @@ y anulo el margin top, para que no quede mucho espacio arriba, y que solo se sep
 .menu li {
     display: block;
     padding: 0.5em;
-    margin-top: 0px;
+    margin-top: 1em;
     margin-bottom: 3em;
 }
 /*Luego con el id menu, edite el bloque en donde se enuentran los li, eliminando su margin top, y aumentando el tamaño de la letra
@@ -535,7 +555,9 @@ aumentando el margen inferior. Ademas se aumenta el tamaño del icono, y como es
                                 
 .post ul li {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    width: 500px;
 }
 
 
@@ -602,9 +624,11 @@ Referencia: https://www.w3schools.com/css/css_attribute_selectors.asp; (no sabia
 input[type=submit] {
     width:40%;}
 
-
 }
-
+/*Aqui se modifica el area de los derechos reservados, dejandolos a un tamaño ideal acorde a la imagen de referencia*/
+footer p{
+font-size: 1em;
+}
 @media only screen and (min-width: 1440px) {
 
     /*TODO: FALTA CSS */
